@@ -2,128 +2,71 @@
 // COMMENTS
 // -------------------------------------------------------------------------
 
-// This sheet: Styling for components like buttons, forms, labels, navbar, tables, etc.
+// This sheet: Color styling for everything.
 
 // -------------------------------------------------------------------------
-// BUTTONS
+// CSS VARIABLES
 // -------------------------------------------------------------------------
 
-// Button styles to start off with
-.btn {
-    display: inline-block;
-    padding: 15px 20px;
-    color: white;
-    margin: 5px 0 0 0;
-    font-family: @font-family-sans-serif;
-    line-height: @line-height-base;
-    text-align: center;
-    font-weight: 400;
-    text-decoration: none;
-    text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
-    background: #79a94b;
-    vertical-align: middle;
-    cursor: pointer;
-    border: .1em solid #689240;
-    border-radius: .3em;
-    white-space: nowrap;
-    
-    // Color transition
-    -webkit-transition: background-color .2s ease-out;
-    -webkit-transition-property: background-color;
-    -webkit-transition-duration: .2s;
-    -webkit-transition-timing-function: ease-out;
-    -webkit-transition-delay: initial;
-    -moz-transition: background-color .2s ease-out;
-    -o-transition: background-color .2s ease-out;
-    -ms-transition: background-color .2s ease-out;
-    transition: background-color .2s ease-out;
-    transition-property: background-color;
-    transition-duration: .2s;
-    transition-timing-function: ease-out;
-    transition-delay: initial;
+:root {
+  // Brand colors
+  --brand-primary: #689240;
+  --brand-primary-dark: darken(#689240, 15%);
+  --brand-success: #5cb85c;
+  --brand-warning: #f0ad4e;
+  --brand-danger: #d9534f;
+  --brand-info: #A0B586;
+  
+  // Grayscale
+  --black-10: darken(#fff, 10%);
+  --black-20: darken(#fff, 20%);
+  --black-30: darken(#fff, 30%);
+  --black-40: darken(#fff, 40%);
+  --black-50: darken(#fff, 50%);
+  --black-60: darken(#fff, 60%);
+  --black-70: darken(#fff, 70%);
+  --black-80: darken(#fff, 80%);
+  --black-90: darken(#fff, 90%);
+  
+  // Text & links
+  --text-color: var(--black-70);
+  --link-color: var(--brand-primary);
+  --link-color-hover: var(--brand-primary-dark);
+  
+  // Buttons
+  --btn-color: var(--brand-info);
+  --btn-color-hover: darken(var(--brand-info), 15%);
 }
-
-.btn:hover,
-  &:focus {
-    text-decoration: none;
-    background: #689240;
-    color: white;
-  }
-
-.btn:active,
-  &.active {
-    outline: 0;
-    background-image: none;
-  }
 
 // -------------------------------------------------------------------------
-// FORMS
+// LESS VARIABLES (for backwards compatibility)
 // -------------------------------------------------------------------------
 
-// Normalize non-control form elements
+// Grayscale
+@black-10:                 darken(#fff, 10%);
+@black-20:                 darken(#fff, 20%);
+@black-30:                 darken(#fff, 30%);
+@black-40:                 darken(#fff, 40%);
+@black-50:                 darken(#fff, 50%);
+@black-60:                 darken(#fff, 60%);
+@black-70:                 darken(#fff, 70%);
+@black-80:                 darken(#fff, 80%);
+@black-90:                 darken(#fff, 90%);
 
-fieldset {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
+// Brand colors - name them whatever you want
+@brand-primary:           #689240;
+@brand-success:           #5cb85c;
+@brand-warning:           #f0ad4e;
+@brand-danger:            #d9534f;
+@brand-info:              #A0B586;
 
-legend {
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin-bottom: @line-height-computed;
-    font-size: (@font-size-base * 1.5);
-    line-height: inherit;
-    border: 0;
-}
+// Text color
+@text-color:              @black-70;
 
-label {
-    display: inline-block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
+// Links
+@link-color:              @brand-primary;
+@link-color-hover:        darken(@link-color, 15%);
 
-// Reset height for `textarea`s
-  textarea& {
-    height: auto;
-  }
-
-
-// Normalize form controls
-
-// Position radios and checkboxes better
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 4px 0 0;
-  margin-top: 1px \9; /* IE8-9 */
-  line-height: normal;
-}
-
-// Set the height of select and file controls to match text inputs
-input[type="file"] {
-  display: block;
-}
-
-// Make multiple select elements height not fixed
-select[multiple],
-select[size] {
-  height: auto;
-}
-
-// Fix optgroup Firefox bug per https://github.com/twbs/bootstrap/issues/7611
-select optgroup {
-  font-size: inherit;
-  font-style: inherit;
-  font-family: inherit;
-}
-
-// Fix for Chrome number input
-// Setting certain font-sizes causes the `I` bar to appear on hover of the bottom increment button.
-// See https://github.com/twbs/bootstrap/issues/8350 for more.
-input[type="number"] {
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    height: auto;
-  }
-}
+// Buttons
+@btn-color:              @brand-info;
+@btn-color-hover:        darken(@btn-color, 15%);
