@@ -12,39 +12,6 @@ Fore was originally created by [Jordan Bowman](https://www.jrdnbwmn.com/) from [
 - Lightweight and fast-loading
 - Compatible with modern browsers
 
-## Getting Started
-
-### Quick Start
-
-1. Clone this repository
-2. Open `index.html` in your browser
-
-### Development
-
-1. Clone this repository
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Start the development server:
-   ```
-   npm start
-   ```
-4. Make changes to LESS files in the `less` directory
-5. Build the project:
-   ```
-   npm run build
-   ```
-
-### Build Commands
-
-- `npm run less` - Compile LESS to CSS
-- `npm run watch` - Watch for LESS changes and compile automatically
-- `npm run minify-css` - Minify CSS
-- `npm run minify-js` - Minify JavaScript
-- `npm run build` - Build everything
-- `npm start` - Start a local development server
-
 ## Browser Support
 
 The template is compatible with:
