@@ -1,0 +1,7 @@
+{
+  "paths": ["less"],
+  "outputDir": "css",
+  "plugins": [],
+  "sourceMap": true,
+  "compress": false
+}
